@@ -330,5 +330,3 @@ document.getElementById('comp').innerText = download;
       target.style.backgroundColor = `rgba(123, 92, 255, ${progress})`; 
     });
     
-
-    
