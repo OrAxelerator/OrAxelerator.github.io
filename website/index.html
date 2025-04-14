@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    
+  
 
 
 
@@ -18,8 +19,8 @@
         <div class="resaux-img">
 
             <a href="https://github.com/OrAxelerator/OrAxelerator.github.io" target="_blank" ><img src="assets/images/git.png" class="img-git" ></a>
-            <img src="assets/images/Instagram_icon.png" class="img-insta">
-            <a href="https://www.youtube.com/@OrAxelerator" target="_blank">   <img src="assets/images/yt.png" class="img-yt"></a>
+            <img src="assets/images/insta-app.png" class="img-insta">
+            <a href="https://www.youtube.com/@OrAxelerator" target="_blank">   <img src="assets/images/youtube-play.png" class="img-yt"></a>
             <a href="" target="_blank"> <img src="assets/images/gg.png" class="img-gg"> </a>
         </div>
     </div>
@@ -41,8 +42,11 @@
         <div class="citation">
             <div class="square square1">
                 <div class="txt-button-s0">
-                    <p class="txt_citation">  <b style="font-size: 32px;font-family: 'Lucida Handwriting', cursive;">MyENT</b> <br> <a style="font-family: 'Bradley Hand', cursive;  font-size: 1.2rem;">la seul* extenions qui permet de personnalisez votre ent </a> </p>
-                    <button class="chrome-btn">Ajouter à Chrome</button>
+                    <p class="txt_citation">  <b style="font-size: 64px;font-family: 'Lucida Handwriting', cursive;">MyENT</b> <br> <a style="font-family: 'Bradley Hand', cursive;  font-size: 1.5rem;">la seul* extenions <br>qui permet de personnalisez votre ent </a> </p>
+                    <a href="#0" class="btn10">
+                        <span>Télécharger maintenant</span>
+                     <div class="transition"></div>
+                   </a>
                 </div>
             </div>
         </div>
@@ -58,21 +62,125 @@
 
 <div class="content" id="section1">
 
-    <div class="up-section">
-    </div>
+    <div class="up-section"></div>
     <p class="titer-para"> 1 - Qu'est ce que myEnt ??</p>
-    <p >my ent est juste une estensions web</p>
+    <p class="txt-article">my ent est juste une estensions web</p> <br>
+    <p class="txt-article"> <a style=" font-style: italic;">💡 Que fait Myent ?</a> <br>Elle te permet de modifier l'apparence de l’ENT. Que tu veuilles un thème plus sombre, des couleurs plus sympa ou une mise en page plus claire, Myent te donne les outils pour le faire.</p>
 
 
-    <div class="carroussel">
+
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button class="tab-link active tabBtn1" onclick="openTab(event, 'tab1')">fonctionalité principale</button>
+            <button class="tab-link tabBtn2" onclick="openTab(event, 'tab2')">dernière fonctionalité</button>
+        </div>
+            <div id="tab1" class="tab-content active">
+
+                <div class="container-fonc">
+                    
+                        <div class="fonc">
+                            <div class="texte-hover">Myent – Change de thème</div>
+                        </div>
+                        
+                        <div class="fonc">
+                            <div class="texte-hover">Myent – Organise ton menu</div>
+                        </div>
+
+                        <div class="fonc">
+                            <div class="texte-hover">Myent – Change de psuedo</div>
+                        </div>
+                </div>
+
+
+                
+
+
+
+            </div>
+
+
+        <div id="tab2" class="tab-content img-container2">
+            
+
+            <div class="container-fonc">
+                    
+                <div class="fonc">
+                    <img src="assets/images/cat_mystere.gif" class="fonc-b-1">
+                    <div class="texte-hover">Myent – ???</div>
+                </div>
+                
+                <div class="fonc">
+                    <div class="texte-hover">Myent – lofi girl</div>
+                </div>
+
+                <div class="fonc">
+                    <div class="texte-hover">Myent – supr devoir fini</div>
+                </div>
+            </div>
+
+
         
+        </div>
     </div>
+</div>
+
+<div class="content" id="section2">
+    <div class="up-section"></div>
+
+    <div class="container-download">
+        <div class="container-btn-canva">
+    
+            <button id="button" class="ready button" onclick="clickButton();" >
+                
+                <div class="message submitMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 12.2">
+                        <polyline stroke="currentColor" points="2,7.1 6.5,11.1 11,7.1 "/>
+                        <line stroke="currentColor" x1="6.5" y1="1.2" x2="6.5" y2="10.3"/>
+                    </svg> <span class="button-text">Cliquer</span>
+                </div>
+                
+                <div class="message loadingMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17">
+                        <circle class="loadingCircle" cx="2.2" cy="10" r="1.6"/>
+                        <circle class="loadingCircle" cx="9.5" cy="10" r="1.6"/>
+                        <circle class="loadingCircle" cx="16.8" cy="10" r="1.6"/>
+                    </svg>
+                </div>
+                
+                <div class="message successMessage">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+                        <polyline stroke="currentColor" points="1.4,5.8 5.1,9.5 11.6,2.1 "/>
+                    </svg> <span class="button-text">Votre navigatuer est compatible</span>
+                </div>
+            </button>
+            <canvas id="canvas"> </canvas>
+            
+              <script src="scripts.js" > </script>
+              
+        </div>
+
+        <div class="container-instruction">
+            
+        </div>
+
+    </div>
+    
+      
+  
+
+
 
 </div>
 
 
 
+  
 
+
+
+
+
+</script>
 
 
 
