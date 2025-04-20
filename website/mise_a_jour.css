@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: rgb(0, 0, 0);
+}
+
+.texte {
+    background-color: rgb(167, 205, 238);
+}
+
+
+
+
+body.dark-mode .texte {
+    background-color: #434343;
+}
+
+
+.bg-info {
+    background-color: beige; 
+}
+
+body.dark-mode .bg-info{
+    background-color: #5b5b5b;
+}
+
+header.dark-mode {
+    background-color: rgb(57, 57, 57);
+}
+
+body.dark-mode .container-recherche {
+    background-color: black;
+}
+
+
+
+
+body.dark-mode .main {
+    background-color: #2b2b2b;
+}
+
+
+body.dark-mode aside {
+    background-color: #4f4e50;
+}
+
+
+body.dark-mode article {
+    background-color: rgb(50, 50, 52);
+}
+body.dark-mode article:hover {
+    background-color: rgb(60, 59, 59);
+}
+
+
+
+
+body.dark-mode .description {
+    background-color: #4f4e50;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+       
+    header {
+        background-color: grey;
+        width: 100%;
+        height: 8em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-radius: 0px 0px 5px 5px;
+        
+    }
+    .container-recherche {
+        display: flex;
+        width: 100%;
+        background-color: rebeccapurple;
+    }
+    main {
+        background-color: #f2f2f2;
+        width: 100%;
+        margin-top: 5em;
+        height: 50em;
+    
+    }
+    
+    aside {
+    background-color: darkblue;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 2em;
+    margin-top: 1em;
+    
+    }
+    .container-aside {
+        
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-right: 15px;
+        word-break: break-all;
+    }
+    
+    h1 {
+        color: rgb(63, 64, 65);
+    }
+    
+    article {
+        width: 90%;
+        background-color: #f2f2f2;
+        margin : 0 auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        border : solid black 2px;
+    
+    }
+    article:hover {
+        background-color:azure;
+        
+        box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.307);
+        transform: scale(1.01);
+    }
+    .info, .info2 , .fonctionalité, .bug, .commentaire {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        word-break: break-all;
+        
+    
+    }
+    
+    
+    .info, .info2 {
+        background-color: beige;
+    
+        
+    }
+    .info {
+        margin-top: 15px;
+    }
+    .info2 {
+        margin-bottom: 15px;
+    }
+    .fonctionalité {
+        background-color: rgb(230, 255, 247);
+        margin-top: 15px;
+    }
+    .bug{
+        background-color: rgb(230, 255, 247);
+        
+    }
+    
+    ul {
+        margin-left: 15px;
+    }
+    .commentaire {
+        background-color: rgb(230, 255, 247);
+        margin-bottom: 15px;
+    
+    }
+    .description {
+        background-color: rgb(235, 216, 255);
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        gap :15px;
+    
+    }
+
+    .tool {
+        width: 30%;
+        height: 3em;
+        
+        position: fixed;
+        z-index: 4;
+        display: flex;
+        margin-top: 4em;
+        right: 10;
+        
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width:1100px) {
+    
+    
+    header {
+        background-color: grey;
+        width: 100%;
+        height: 5em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-radius: 0px 0px 5px 5px;
+        
+    }
+    .container-recherche {
+        display: flex;
+        width: 100%;
+        background-color: rebeccapurple;
+    }
+    main {
+        background-color: #f2f2f2;
+        width: 100%;
+        margin-top: 5em;
+        height: 50em;
+    
+    }
+    
+    aside {
+    background-color: darkblue;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 2em;
+    margin-top: -1em;
+    
+    }
+    .container-aside {
+        
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-right: 15px;
+        word-break: break-all;
+    }
+    
+    h1 {
+        color: rgb(63, 64, 65);
+    }
+    
+    article {
+        width: 90%;
+        background-color: #f2f2f2;
+        margin : 0 auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        border : solid black 2px;
+    
+    }
+    article:hover {
+        background-color:azure;
+        
+        box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.307);
+        transform: scale(1.01);
+    }
+    .info, .info2 , .fonctionalité, .bug, .commentaire {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        word-break: break-all;
+        
+    
+    }
+    
+    
+    .info, .info2 {
+        background-color: beige;
+    
+        
+    }
+    .info {
+        margin-top: 15px;
+    }
+    .info2 {
+        margin-bottom: 15px;
+    }
+    .fonctionalité {
+        background-color: rgb(230, 255, 247);
+        margin-top: 15px;
+    }
+    .bug{
+        background-color: rgb(230, 255, 247);
+        
+    }
+    
+    ul {
+        margin-left: 15px;
+    }
+    .commentaire {
+        background-color: rgb(230, 255, 247);
+        margin-bottom: 15px;
+    
+    }
+    .description {
+        background-color: rgb(235, 216, 255);
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        gap :15px;
+    
+    }
+
+    .tool {
+        width: 30%;
+        height: 3em;
+        
+        position: fixed;
+        z-index: 4;
+        display: flex;
+        justify-content: right; 
+        right: 0;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1100px){
+    header {
+        background-color: grey;
+        width: 100%;
+        height: 5em;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        border-radius: 0px 0px 5px 5px;
+        text-align: center;
+        
+    }
+    header.dark-mode {
+        background-color: rgb(57, 57, 57);
+    }
+    .container-recherche {
+        display: flex;
+        width: 100%;
+        background-color: rebeccapurple;
+        margin: auto 0;
+    }
+
+    body.dark-mode .container-recherche {
+        background-color: black;
+    }
+    .main {
+        background-color: #fff6f6;
+        width: 100%;
+        margin-top: 5em;
+        height: 50em;
+    }
+    body.dark-mode .main {
+        background-color: #2b2b2b;
+    }
+    
+    aside {
+    background-color: darkblue;
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 2em;
+    margin-top: -1em;
+    
+    }
+    body.dark-mode aside {
+        background-color: #4f4e50;
+    }
+    .container-aside {
+        
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-right: 15px;
+        word-break: break-all;
+        text-align: center;
+    }
+    
+    h1 {
+        color: rgb(63, 64, 65);
+    }
+    
+    article {
+        width: 50%;
+        background-color: #f2f2f2;
+        margin : 0 auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        border : solid black 2px;
+    
+    }
+    body.dark-mode article {
+        background-color: rgb(50, 50, 52);
+    }
+    body.dark-mode article:hover {
+        background-color: rgb(60, 59, 59);
+    }
+    article:hover {
+        background-color:azure; 
+        box-shadow: 5px 5px 10px  rgba(0, 0, 0, 0.307);
+        transform: scale(1.01);
+    }
+    .info, .info2 , .fonctionalité, .bug, .commentaire {
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        word-break: break-all;
+    }
+
+   
+    .texte {
+        background-color: rgb(167, 205, 238);
+    }
+    body.dark-mode .texte {
+        background-color: #434343;
+    }
+    
+    
+    .bg-info {
+        background-color: beige; 
+    }
+
+    body.dark-mode .bg-info{
+        background-color: #5b5b5b;
+    }
+    .info {
+        margin-top: 15px;
+    }
+    .info2 {
+        margin-bottom: 15px;
+    }
+    .fonctionalité {
+        
+        margin-top: 15px;
+    }
+
+    
+    ul {
+        margin-left: 15px;
+    }
+    .commentaire {
+        
+        margin-bottom: 15px;
+    
+    }
+    .description {
+        background-color: rgb(235, 216, 255);
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        gap :15px;
+    
+    }
+    body.dark-mode .description {
+        background-color: #4f4e50;
+    }
+
+
+    .tool {
+        width: 30%;
+        height: 3em;
+        
+        position: fixed;
+        z-index: 4;
+        display: flex;
+        justify-content: right; 
+        right: 0;
+        
+    }
+}
+
+
+
+/* h1 = gros titre    h3 titre moyen  */

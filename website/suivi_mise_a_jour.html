@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISE A JOUR</title>
+    <link rel="stylesheet" href="mise_a_jour.css">
+</head>
+<body>
+    
+
+
+
+<header>
+
+    <h1>SUIVI DES MISE A JOUR DE MYENT</h1>
+
+    <div class="container-recherche">
+
+     
+    <p>V : </p>
+        <input type="number">
+
+
+    <p>.</p>
+
+    
+    </div>
+
+    
+</header>
+
+
+
+
+<div class="tool">
+    <button id="theme-toggle">
+        <img src="">
+        <p>Passer en mode sombre </p>
+    </button>
+</div>
+
+
+
+
+<main class="main">
+
+    <aside>
+        <div class="container-aside">
+
+            
+            <h3>ce site sert juste a tracer les modifications et mise a jour de myent</h3>
+        </div>
+    </aside>
+
+
+    <article class="article1 true" id="a1 true">
+
+        <div class="info bg-info">
+            <h3>version : </h3>
+            <h3 > date : </h3>
+            
+        </div>
+
+        <div class="description ">
+            <div class="fonctionalité texte ">
+                <h3>Fonctionalité rajouté</h3>
+                <h5>
+                    <ul>
+                        <li>pas grand</li>
+                        <li>chose</li>
+                    </ul>
+                </h5>
+            </div>
+            
+            <div class="bug texte">
+                <h3>BUG : </h3>
+                <h5>
+                    <ul>
+                        <li>pas de bug trouver</li>
+                    </ul>
+                </h5>
+            </div>
+    
+            <div class="commentaire texte">
+                    <h3>Commentaire :</h3>
+                    <h5>...</h5>
+            </div>
+        </div>
+
+        <div class="info2 bg-info">
+            <h3>ID : #</h3>
+        </div>
+
+
+    </article>
+
+
+
+    <article class="article2 false" id="a2 false">
+
+        <div class="info">
+            <h3>version : </h3>
+            <h3 > date : </h3>
+            
+        </div>
+
+        <div class="description">
+            <div class="fonctionalité">
+                <h3>Fonctionalité rajouté</h3>
+                <h5>
+                    <ul>
+                        <li>pas grand</li>
+                        <li>chose</li>
+                    </ul>
+                </h5>
+            </div>
+            
+            <div class="bug">
+                <h3>BUG : </h3>
+                <h5>
+                    <ul>
+                        <li>pas de bug trouver</li>
+                    </ul>
+                </h5>
+            </div>
+    
+            <div class="commentaire">
+                    <h3>Commentaire :</h3>
+                    <h5>...</h5>
+            </div>
+        </div>
+
+        <div class="info2">
+            <h3>ID : #</h3>
+        </div>
+
+
+    </article>
+
+
+    <article class="article3 false" id="a3 false">
+
+        <div class="info">
+            <h3>version : </h3>
+            <h3 > date : </h3>
+            
+        </div>
+
+        <div class="description">
+            <div class="fonctionalité">
+                <h3>Fonctionalité rajouté</h3>
+                <h5>
+                    <ul>
+                        <li>pas grand</li>
+                        <li>chose</li>
+                    </ul>
+                </h5>
+            </div>
+            
+            <div class="bug">
+                <h3>BUG : </h3>
+                <h5>
+                    <ul>
+                        <li>pas de bug trouver</li>
+                    </ul>
+                </h5>
+            </div>
+    
+            <div class="commentaire">
+                    <h3>Commentaire :</h3>
+                    <h5>...</h5>
+            </div>
+        </div>
+
+        <div class="info2">
+            <h3>ID : #</h3>
+        </div>
+
+
+    </article>
+
+
+
+    <article class="article4 false" id="a4 false">
+
+        <div class="info">
+            <h3>version : </h3>
+            <h3 > date : </h3>
+            
+        </div>
+
+        <div class="description">
+            <div class="fonctionalité">
+                <h3>Fonctionalité rajouté</h3>
+                <h5>
+                    <ul>
+                        <li>pas grand</li>
+                        <li>chose</li>
+                    </ul>
+                </h5>
+            </div>
+            
+            <div class="bug">
+                <h3>BUG : </h3>
+                <h5>
+                    <ul>
+                        <li>pas de bug trouver</li>
+                    </ul>
+                </h5>
+            </div>
+    
+            <div class="commentaire">
+                    <h3>Commentaire :</h3>
+                    <h5>...</h5>
+            </div>
+        </div>
+
+        <div class="info2">
+            <h3>ID : #</h3>
+        </div>
+
+
+    </article>
+
+
+    <script>
+
+    
+
+
+    let articles = document.querySelectorAll("article").forEach(article => {
+        if ( article.classList.contains('false')) {
+            article.remove();
+        }
+    
+    });
+
+    
+    const themeToggleButton = document.getElementById('theme-toggle');
+    let fond = ["white", "dark"];
+    let fond_actuel = fond[0];
+
+    function changeMod() {
+        console.log(fond_actuel);
+        if (fond_actuel === fond[0]) {
+            console.log("passer en dark");
+            fond_actuel = fond[1];
+            document.body.classList.add('dark-mode');
+            themeToggleButton.textContent = 'Passer en mode clair';
+        } else {
+            console.log("passer en white");
+            fond_actuel = fond[0];
+            document.body.classList.remove('dark-mode');
+            themeToggleButton.textContent = 'Passer en mode sombre';
+        }
+
+        // Parcourir tous les éléments et appliquer les classes appropriées
+        document.querySelectorAll('*').forEach(element => {
+            element.classList.forEach(className => {
+                if (className.startsWith('dark-mode-')) {
+                    element.classList.remove(className);
+                }
+            });
+            if (fond_actuel === fond[1]) {
+                element.classList.add(`dark-mode-${element.className}`);
+            }
+        });
+    }
+
+    themeToggleButton.addEventListener('click', changeMod);
+
+
+
+    
+
+
+
+    </script>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
