@@ -410,10 +410,8 @@
     height: 15em;
     background-color: red;
     display: flex;
-    
     margin-bottom: auto;
     margin-top: auto;
-
     overflow: hidden;
   }
 
