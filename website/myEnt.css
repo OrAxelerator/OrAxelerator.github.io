@@ -286,9 +286,6 @@
       margin-top: auto;
 
       justify-content: space-around;
-
-
-
   }
 
   .fonc {
@@ -413,6 +410,7 @@
     margin-top: auto;
     justify-content: space-around;
     align-items: center;
+    
 
   }
 
@@ -420,13 +418,23 @@
     width: 15em;
     height: 15em;
     background-color: red;
+    border-radius: 10px;
     display: flex;
     margin-bottom: auto;
     margin-top: auto;
+    position: relative;
     overflow: hidden;
   }
 
-
+  .texte-carré {
+    width: 100%;
+    height: 2em;
+    background-color: gray;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
 
 
 
