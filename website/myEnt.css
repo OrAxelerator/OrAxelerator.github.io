@@ -30,6 +30,17 @@
       
   }
 
+  html, body {
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclut les paddings et les bordures dans la largeur et la hauteur */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Applique box-sizing à tous les éléments */
+}
+
 
   header {
     height: 3em;
