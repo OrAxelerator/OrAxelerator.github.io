@@ -32,29 +32,34 @@
 
 
   header {
-      height: 3em;
-      width: 100%;
-      z-index: 3;
-      position: fixed;
-      display: flex;
-      
-      /*margin: 0 30%;  /* PAS ENCORE BIEN CENTRÉ PROPREMENT ...*/
+    height: 3em;
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    justify-content: space-between; /* Distribue l'espace entre les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+    
   }
-
+  
   .onglet {
-      background-color: rgb(47, 54, 55);
-      border-radius: 0px 0px 14px 10px;
-      display: flex;
-      justify-content: center;
-      width: fit-content;
-      margin: 0 auto;
+    background-color: rgb(47, 54, 55);
+    border-radius: 0px 0px 14px 10px;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto; /* Centre horizontalement */
+    padding-top: 15px;
+    padding: 10px;
+    margin-top: -20px;
   }
+  
   .resaux {
-      background-color: rgba(0, 0, 0, 0);
-      width: fit-content;
-      
-      border-radius: 0px 0px 10px 0px;
-      border :solid 2px gray;
+    background-color: rgba(0, 0, 0, 0);
+    width: fit-content;
+    border-radius: 0px 0px 10px 0px;
+    border: solid 2px gray;
+    position: absolute; /* Positionne absolument la div .resaux */
+    left: 0; /* Aligne à gauche */
   }
   .resaux-img {
      display: flex;
@@ -177,7 +182,7 @@
   }
 */
   #section1 {
-      background-color: #161C8C;
+      background-color: rgb(39, 60, 144);
       height: 51em;
       border-radius: 35px 35px 0px 0px;
       margin-top: -2em;
@@ -185,13 +190,20 @@
   }
 
   #section2 {
-      background-color: #3498db;
+      background-color: rgb(52, 84, 209);
       width: 100%;
       height: 50em;
       border-radius: 35px 35px 0px 0px;
       margin-top: -2em;
   }
 
+  #section3 {
+    background-color: #1f44b4;
+    width: 100%;
+    height: 50em;
+    border-radius: 35px 35px 0px 0px;
+    margin-top: -2em;
+  }
 
 
 
@@ -258,7 +270,7 @@
       background-color: #161C8C;
       width: 100%;
       height: 20em;
-      display: flex;
+     display: flex;
       margin-bottom: auto;
       margin-top: auto;
 
@@ -312,10 +324,11 @@
   
   
   .tabs {
-      width: 100%;
+      width: 90%;
       padding: 20px;
-      background-color: #676565;
+
       margin: 0 auto;
+      
   }
   
   .tab-buttons {
@@ -359,18 +372,58 @@
   .tab-link {
       width: 200px;
       color: white;
+      
   }
   
   
   
   .tabBtn1 {
       border-radius: 10px 0px 0px 0px;
+      border: solid black 2px;
   
   }
   
   .tabBtn2 {
       border-radius: 0px 10px 0px 0px;
+      border: solid 8px black ;
   }
+
+
+
+  .s3-container-carré {
+    width: 85%;
+    height: 20em;
+    background-color: cadetblue;
+    margin: 0 auto;
+    margin-top: 2em;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .s3-carré {
+    width: 15em;
+    height: 15em;
+    background-color: red;
+    display: flex;
+    
+    margin-bottom: auto;
+    margin-top: auto;
+
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+
 
   
 
