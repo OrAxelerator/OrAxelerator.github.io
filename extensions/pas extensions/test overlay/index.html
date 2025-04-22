@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <div id="fullScreenOverlay" style="height:100vh; width: 100vw; background-color: rgba(3, 255, 205, 0.956); top: 0; left: 0;position: fixed; z-index: 999; overflow: hidden; align-items: center;">
+
+
+    
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+
+    
+    .titre1 {
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        height: auto ;
+        margin: auto;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        
+    }
+    
+    
+    .main {
+        background-color: blueviolet;
+        width: 95%;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding-top: 10px;
+        padding-right:5px ;
+        padding-left: 5px;
+    }
+    
+    
+    .gif {
+        height: 200px;
+    }
+    
+    
+    .logo {
+        width: 100%;
+    }
+    
+    
+   
+    
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0.001s !important;
+      }
+    }
+    .container {
+      background: linear-gradient(100deg, #402, #006);
+      padding: 2em;
+      min-height: 100vh;
+      align-items: center;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 55'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='7' opacity='.1'%3E%3Cpath d='M-345 34.5s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 48.3 0 48.3s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 20.7s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 34.5 0 34.5s115-13.8 115-13.8S172.5 6.9 230 6.9s115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8m-920 27.6s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 62.1 0 62.1s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 6.9s57.5-13.8 115-13.8S-115 6.9-115 6.9-57.5 20.7 0 20.7 115 6.9 115 6.9 172.5-6.9 230-6.9 345 6.9 345 6.9s57.5 13.8 115 13.8S575 6.9 575 6.9'/%3E%3Cpath d='M-345-6.9s57.5-13.8 115-13.8S-115-6.9-115-6.9-57.5 6.9 0 6.9 115-6.9 115-6.9s57.5-13.8 115-13.8S345-6.9 345-6.9 402.5 6.9 460 6.9 575-6.9 575-6.9m-920 69s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 75.9 0 75.9s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3C/g%3E%3C/svg%3E%0A"), linear-gradient(80deg, #202, #006);
+      background-position: 50% 50%;
+      animation: background-move 10s linear infinite;
+      background-size: 100vw auto, 100% 100%;
+      background-size: max(100vw, 30em) auto, 100% 100%;
+    }
+    
+    @keyframes background-move {
+      0% {
+        background-position: 0 0, 0 0;
+      }
+      100% {
+        background-position: 100vw 0, 0 0;
+        background-position: max(100vw, 40em) 0, 0 0;
+      }
+    }
+    
+    p {
+        text-align: center;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input, select, option {
+        width: 70%;
+        gap : 10px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #C2AAF2;
+    }
+    button {
+        width: 50%;
+        margin :    0 auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #6FEFFC;
+        height: 34px;
+    }
+    h3, h5 {
+                text-align: center;
+                margin-bottom: 15px;
+    }
+    .debut-liste {
+        text-decoration: underline;
+        margin-left: -20px;
+        margin-top: -10px;
+        margin-bottom: -1px;
+        text-align: left;
+    }
+    ul {
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+    
+    .contact {
+        width: 50%;
+        margin: 0 auto ;
+        margin-left: 25%;
+        margin-right: 25%;
+        transition: transform 0.3s ease;
+    }
+    .contact:hover{
+        transform: scale(1.2);
+    }
+
+    .gif {
+        width: 20%; 
+        margin-left: 50%;
+          
+    }
+    </style>
+    
+    
+    
+    <div class="container">
+       
+    
+        
+        
+        
+                <div class="titre1">  
+                   <img src="/assets/images/logo copie.png" class="logo">
+               </div>
+    
+    
+               <div class="main">
+                       <h3>Veuillez rentrer vos choix pour pouvoir créer VOTRE ent Personnalisé 🤗 </h3>
+                        
+                        <div class="row">
+    
+                            <input type="text" id="valeur1" placeholder="Pseudo">
+                          
+                           
+           
+                            <select id="choix">
+                               <option value="0">Basique (nul)</option>
+                               <option value="1">blue</option>
+                               <option value="2">bleu foncé</option>
+                               <option value="0"> darkmod (pas encore disp)</option>
+                           </select>
+    
+                           <select id="choix2">
+                                <option value="true">Afficher les devoirs fini</option>
+                                <option value="false">Arreter d'afficher les devoirs fini</option>
+                           </select>
+    
+                           <select id = "choix3">
+                                <option value="false"> ne pas mettre de bruitage (normal)</option>
+                                <option value="true"> mettre bruitage</option>
+                           </select>
+    
+                           <button id="save">Sauvegarder</button>
+                           <script src="/scripts/popup.js"></script>
+                        </div>
+                     <h5><i><mark>sauvegarder</mark> puis recharger la page  <mark>crtl + r</mark> pour appliquer les modifications</i></h5>
+                    
+               
+               <p class="trait" style="width: 100%; background-color: black; height: 0.25ch;"></p>
+                        <ul> <p class="debut-liste">un problème ?</p>
+                            <li> vérifier votre connecxion 🛜</li>
+                            <li> recharger la page 🔄</li>
+    
+    
+                        </ul>
+                        <p class="trait" style="width: 100%; background-color: black; height: 0.25ch;"></p>
+                        <ul>
+    
+                            <li>un bug trouvé ❗️</li>
+                            <li>une idée de fonctionnalité 💡</li>
+                            <li>autre ...</li>
+                        </ul>
+    
+                        <p style="text-align: left;"> .➡️ me contacter :    </p>
+    
+    <img src="/assets/images/IMG_3198 copie.png" class="contact">
+    
+    <p> oui j'ai rien d'autre mais c déjà mieux qu'un mail ou un ID brawls stars ...</p>
+    
+    
+    <p class="trait" style="width: 100%; background-color: black; height: 0.25ch;"></p>
+    <p> <a href="https://github.com/OrAxelerator/myEnt/blob/main/README%20-%20privacy.md">VOIR POLITIQUE DE CONFIDENTIALITÉ</a></p>
+                   </div>
+    
+    
+    <div style= "top:0; width: 100%; left:0; position:fixed; z-index:999999; overflow:hidden; display:flex; margin-right: -14px;">
+       
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+        
+        
+        
+        
+      
+    </div>
+    
+        
+    <div id="fullScreenOverlay" style="height:100vh; width:100vw; top:0; left:0; position:fixed; z-index:999999; overflow:hidden; display:flex;">
+        <div id="leftPanel" style="width:50vw; height:100vh; background-color:blueviolet; transition: transform 1s ease;"></div>
+        <div id="rightPanel" style="width:50vw; height:100vh; background-color:white; transition: transform 1s ease;"></div>
+      </div>
+      
+      <script>
+        // Lancement de l'animation après 2 secondes
+        setTimeout(() => {
+          document.getElementById("leftPanel").style.transform = "translateX(-100%)";
+          document.getElementById("rightPanel").style.transform = "translateX(100%)";
+        }, 2000);
+      
+        // Suppression des éléments après l'animation (3.2s total)
+        setTimeout(() => {
+          const left = document.getElementById("leftPanel");
+          const right = document.getElementById("rightPanel");
+      
+          if (left) left.remove();
+          if (right) right.remove();
+        }, 3200);
+      </script>
+
+
+
+</body>
+</html>
+
+

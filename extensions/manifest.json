@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Modification de l'ENT",
+  "description": "modifier l'interface de l'ENT.Cette extension respecte le RGPD aucune donnée personnelle n’est collectée/transmise",
+  "version": "1.2",
+  "author" : "OrAxelerator",
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mon-ent-occitanie.fr/*",
+        "https://*.ent.fr/*"
+      ],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "host_permissions": [
+    "http://joseph-vallot.mon-ent-occitanie.fr/*",
+    "https://joseph-vallot.mon-ent-occitanie.fr/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/gif/*.gif",
+        "assets/images/*.png",
+        "assets/images/*.ico",
+        "assets/icons/*.png",
+        "assets/musics/*.mp3"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "privacy policy local": "assets/html/privacy_policy.html",
+  "privacy policy online" : "https://oraxelerator.github.io/website/privacy_policity.html",
+  "homepage_url": "https://oraxelerator.github.io/website/myEnt.html"
+}
