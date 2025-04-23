@@ -13,6 +13,61 @@
       event.currentTarget.classList.add('active');
   }
 
+  function isMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+  
+  if (isMobile()) {
+    console.log("📱 Utilisateur sur mobile !");
+    document.getElementById("hidden").classList.add("hidden")
+    document.getElementById("mesage").innerHTML = "<p>site pas dispo sur mobile</p>"
+
+
+  } else {
+    function handleResize() {
+      if (window.innerWidth <= 950) {
+          console.log("ecran trop petit");
+
+
+         
+
+          document.getElementById("hidden").classList.add("hidden")
+
+
+
+          
+  }else {
+    console.log("ecran a la bonne taille")
+    document.getElementById("hidden").classList.remove("hidden")
+
+    
+    
+    
+    
+  }
+    }
+    
+    // Exécute la fonction au chargement de la page
+    handleResize();
+    
+    // Écoute les changements de taille de la fenêtre
+    window.addEventListener('resize', handleResize);
+    console.log("💻 Utilisateur sur PC (ou autre)");
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 clickButton = () => {
@@ -237,7 +292,7 @@ document.getElementById('comp').innerText = download;
   
   if (download === "compatible" ) { /* faire truc avec check ??*/
       window.requestAnimationFrame(render); /*FAIT APPARAITRE CONFÉTI ------------------------------------*/
-      console.log("confétiiiiiiiiiii");
+      //console.log("confétiiiiiiiiiii");
   } else {
       return null
   }
