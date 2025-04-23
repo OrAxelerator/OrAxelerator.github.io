@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Modification de l'ENT",
   "description": "modifier l'interface de l'ENT.Cette extension respecte le RGPD aucune donnée personnelle n’est collectée/transmise",
-  "version": "1.2",
+  "version": "1.2.1",
   "author" : "OrAxelerator",
   "permissions": [
     "storage"
@@ -34,7 +34,8 @@
   ],
   "host_permissions": [
     "http://joseph-vallot.mon-ent-occitanie.fr/*",
-    "https://joseph-vallot.mon-ent-occitanie.fr/*"
+    "https://joseph-vallot.mon-ent-occitanie.fr/*",
+    "https://*.ent.fr/*"
   ],
   "web_accessible_resources": [
     {
