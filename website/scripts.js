@@ -32,13 +32,14 @@
          
 
           document.getElementById("hidden").classList.add("hidden")
+          document.getElementById("hidden").classList.remove("display")
 
 
 
           
   }else {
     console.log("ecran a la bonne taille")
-    document.getElementById("hidden").classList.remove("hidden")
+    document.getElementById("hidden").classList.add("display")
 
     
     
