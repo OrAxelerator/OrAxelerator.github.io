@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Popup</title>
+  <style>
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      background: linear-gradient(180deg, #F3BCFD, #BAEFFA);
+      width: 400px;
+      height: 300px;
+    }
+
+    .screen {
+      display: none;
+
+    }
+
+    .active {
+      display: block;
+    }
+
+    #back-to-screen1, #to-screen2 {
+      width: 80%;
+      height: 3em;
+      background-color: aqua;
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 0 auto;
+      justify-content: center;
+
+
+    }
+
+
+    .scroll {
+      z-index: 99;
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin-right: 3px;
+      margin-top: 3px;
+    }
+
+    .arrow {
+  box-sizing: border-box;
+  height: 4vw;
+  width: 4vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  
+  
+  
+}
+
+
+.sens-arrow-bas {
+  transform: rotate(45deg);
+}
+.sens-arrow-haut {
+  transform: rotate(225deg);
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e242d;
+  height: 3em;
+  width : 3em;
+  border-radius:1000px;
+  
+}
+.scroll{
+  transition: transform  0.3s ease-in-out; 
+}
+
+
+  </style>
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+
+
+
+
+  <div class="container-arrow scroll  " id="container-arrow">
+    <a data-scroll href="#full">
+      <div class="arrow" id="scroll">
+        
+      
+      </div>
+    </a>
+
+
+
+
+
+
+    
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <!-- Écran 1 -->
+  <div id="screen1" class="screen active">
+
+
+
+
+    <div class="p1-container">
+
+
+
+
+      <div class="p1-titre1">
+        <img src="/assets/images/logo copie.png" class="p1-logo">
+      </div>
+
+
+      <div class="p1-main">
+        <h3>Veuillez rentrer vos choix pour pouvoir créer VOTRE ent Personnalisé 🤗 </h3>
+        <h6> aucune de vos donné sera récuper ou utilisé, elle resteront sur votre navigatuer. <a
+            href="https://oraxelerator.github.io/website/privacy_policity.html" target="_blank">VOIR PLUS</a>
+        </h6>
+
+        <div class="p1-row">
+
+          <input class="p1-input" type="text" id="valeur1" placeholder="Pseudo">
+
+
+
+          <select class="p1-select" id="choix">
+            <option class="p1-option" value="0">Basique (nul)</option>
+            <option class="p1-option" value="1">blue</option>
+            <option class="p1-option" value="2">bleu foncé</option>
+            <option class="p1-option" value="0"> darkmod (pas encore disp)</option>
+          </select>
+
+          <!--
+          <select class="p1-select" id="choix2">
+            <option class="p1-option" value="true">Afficher les devoirs fini</option>
+            <option class="p1-option" value="false">Arreter d'afficher les devoirs fini</option>
+          </select>
+          -->
+
+          <!--
+          <select class="p1-select" id="choix3">
+            <option class="p1-option" value="false"> ne pas mettre de bruitage (normal)</option>
+            <option class="p1-option" value="true"> mettre bruitage</option>
+          </select>
+          -->
+
+          <button class="p1-button save" id="save">Sauvegarder</button>
+          <script src="/scripts/popup.js"></script>
+        </div>
+        <h5><i><mark>sauvegarder</mark> puis recharger la page <mark>crtl + r</mark> pour appliquer les
+            modifications</i></h5>
+
+            <button id="to-screen2" style="margin-bottom: 15px;">→ Paramètres avancés</button>
+
+
+            <div class="p1-séparateur"></div>
+        <ul>
+          <p class="p1-debut-liste p1-p">un problème ?</p>
+          <li> vérifier votre connecxion 🛜</li>
+          <li> recharger la page 🔄</li>
+
+
+        </ul>
+       
+        <div class="p1-séparateur"></div>
+        <ul>
+
+          <li>un bug trouvé ❗️</li>
+          <li>une idée de fonctionnalité 💡</li>
+          <li>autre ...</li>
+        </ul>
+
+        <p class="p1-p" style="text-align: left;"> .➡️ me contacter sur le <a
+            href="https://chromewebstore.google.com/detail/modification-de-lent/olikaoeidblenflggdnfbjlmmpihfnhc"
+            target="_blank">site de l'extensions </a></p>
+
+        <p class="p1-p"></p>
+
+        <p class="p1-p"> oui j'ai rien d'autre mais c déjà mieux qu'un mail ou un ID brawls stars ...</p>
+
+
+       
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <style>
+    .p1-titre1 {
+      background-color: rgb(255, 255, 255);
+      width: 90%;
+      height: auto;
+      margin: auto;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+
+    .p1-main {
+      background-color: blueviolet;
+      width: 95%;
+
+      margin: 0 auto;
+      border-radius: 20px;
+      padding-top: 10px;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+.p1-séparateur {
+  width: 100%;
+  height: 0.125em;
+  background-color: black;
+}
+
+
+    .p1-logo {
+      width: 100%;
+    }
+
+
+    html {
+      font-size: calc(100% + 0.5vw);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0.001s !important;
+      }
+    }
+
+    .p1-container {
+      background: linear-gradient(100deg, #402, #006);
+      padding: 2em;
+      min-height: 50vh;
+
+
+      align-items: center;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 55'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='7' opacity='.1'%3E%3Cpath d='M-345 34.5s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 48.3 0 48.3s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 20.7s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 34.5 0 34.5s115-13.8 115-13.8S172.5 6.9 230 6.9s115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8m-920 27.6s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 62.1 0 62.1s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 6.9s57.5-13.8 115-13.8S-115 6.9-115 6.9-57.5 20.7 0 20.7 115 6.9 115 6.9 172.5-6.9 230-6.9 345 6.9 345 6.9s57.5 13.8 115 13.8S575 6.9 575 6.9'/%3E%3Cpath d='M-345-6.9s57.5-13.8 115-13.8S-115-6.9-115-6.9-57.5 6.9 0 6.9 115-6.9 115-6.9s57.5-13.8 115-13.8S345-6.9 345-6.9 402.5 6.9 460 6.9 575-6.9 575-6.9m-920 69s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 75.9 0 75.9s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3C/g%3E%3C/svg%3E%0A"), linear-gradient(80deg, #202, #006);
+      background-position: 50% 50%;
+      animation: background-move 10s linear infinite;
+      background-size: 100vw auto, 100% 100%;
+      background-size: max(100vw, 30em) auto, 100% 100%;
+    }
+
+    @keyframes background-move {
+      0% {
+        background-position: 0 0, 0 0;
+      }
+
+      100% {
+        background-position: 100vw 0, 0 0;
+        background-position: max(100vw, 40em) 0, 0 0;
+      }
+    }
+
+    .p1-p {
+      text-align: center;
+    }
+
+    .p1-row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .p1-input,
+    .p1-select,
+    .p1-option {
+      width: 70%;
+      gap: 10px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #C2AAF2;
+    }
+
+    .p1-button {
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #6FEFFC;
+      height: 34px;
+    }
+
+    h3,
+    h5,
+    h6 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .p1-debut-liste {
+      text-decoration: underline;
+      margin-left: -20px;
+      margin-top: -10px;
+      margin-bottom: -1px;
+      text-align: left;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+
+    .p1-contact {
+      width: 50%;
+      margin: 0 auto;
+      margin-left: 25%;
+      margin-right: 25%;
+      transition: transform 0.3s ease;
+    }
+
+    .p1-contact:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+
+  <!-- Écran 2 ---------------------------------------------------------- -->
+
+
+  <div id="screen2" class="screen">
+
+
+    <style>
+
+
+
+      .p2-container-basique {
+        width: 100%;
+        height: 100vh;
+
+      }
+
+
+
+      .p2-bloc {
+        width: 100%;
+        background-color: #00000011;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+
+      .p2-p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+      }
+
+      .p2-bloc-i-txt {
+        background-color: #F3BCFD;
+
+      }
+
+      .p2-bloc-i-select {
+        background-color: #FFF5D1;
+      }
+
+      .p2-bloc-i-check {
+        background-color: #D2F8D2;
+      }
+
+      .p2-bloc-i-check,
+      .p2-bloc-i-select,
+      .p2-bloc-i-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 85%;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .p2-label.checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: 6em;
+        cursor: pointer;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .p2-input[type="checkbox"] {
+        appearance: none;
+        width: 1.2em;
+        height: 1.2em;
+        border: 2px solid #999;
+        border-radius: 4px;
+        background-color: white;
+        transition: background-color 0.2s ease;
+        position: relative;
+
+      }
+
+      .p2-input[type="checkbox"]:checked {
+        background-color: #BAEFFA;
+        border-color: #5BC0EB;
+      }
+
+      .p2-input[type="checkbox"]:checked::after {
+        content: "✔";
+        position: absolute;
+        top: 0.05em;
+        left: 0.25em;
+        font-size: 0.9em;
+        color: #333;
+      }
+
+
+      .p2-basique {
+        width: 100%;
+        height: 90vh;
+        background-color: #00000031;
+
+      }
+
+      .p2-save {
+        width: 100%;
+        height: fit-content;
+        background-color: #eda4ffde;
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: -1px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+
+      }
+
+      .p2-btn-sauvegarder {
+        padding: 12px 30px;
+        font-size: 16px;
+        color: white;
+        background-color: #5BC0EB;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin: 0 auto;
+      }
+
+      .p2-btn-sauvegarder:hover {
+        background-color: #4fa3d1;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .p2-btn-sauvegarder:active {
+        background-color: #3790b0;
+        transform: translateY(1px);
+      }
+
+
+
+      .p2-input,
+      .p2-select,
+      .p2-option {
+        width: 70%;
+        height: 1.5em;
+        margin: 0 auto;
+        border-radius: 5px;
+        background-color: #C2AAF2;
+      }
+    </style>
+
+
+
+
+    <div class="p2-container-all">
+
+
+
+      <div class="p2-container-basique">
+        <div class="p2-basique">
+
+          <div class="p2-bloc">
+
+            <div class="p2-bloc-i-txt">
+              
+              <!--
+              <input class="p2-input" type="text" id="valeur1" placeholder="Pseudo">
+              -->
+              <input class="p2-input" type="text" id="nomLycée" placeholder="Nom du lycée">
+            </div>
+
+<!--
+            
+<div class="p2-bloc-i-select">
+  <p class="p2-p">couleur de fond :</p>
+  <select class="p2-select" id="choix">
+    <option class="p2-option" value="0">Basique (nul)</option>
+    <option class="p2-option" value="1">blue</option>
+    <option class="p2-option" value="2">bleu foncé</option>
+    <option class="p2-option" value="0"> darkmod (pas encore disp)</option>
+  </select>
+</div>
+-->
+
+            <div class="p2-bloc-i-check">
+              <label class="p2-checkbox-label p2-label">
+                <input type="checkbox" name="option1" id="choix2" class="p2-input">
+                <a style="position:relative;left: -0.5em;"> Afficher devoir ?</a>
+              </label>
+              <label class="p2-checkbox-label p2-label">
+                <input type="checkbox" name="option1" id="choix3" class="p2-input">
+                <a style="position:relative;left: -1em;"> Bruitage ?</a>
+              </label>
+            </div>
+          </div>
+
+        </div>
+        <div class="p2-save">
+          <button id="save" class="p2-btn-sauvegarder save">Sauvegarder</button>
+          <button id="back-to-screen1">← Retour</button>
+          <script src="/scripts/popup.js"></script>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  
+
+
+  </div>
+
+  <script src="/scripts/scripts.js"></script>
+
+</body>
+
+</html>

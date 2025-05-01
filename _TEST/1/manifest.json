@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "test",
+  "description": "test",
+  "version": "1.2.2",
+  "author" : "OrAxelerator",
+  "permissions": [
+    "storage"
+  ],
+  
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mon-ent-/*.fr/*"
+      ],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "host_permissions": [
+    "http://joseph-vallot.mon-ent-occitanie.fr/*",
+    "https://joseph-vallot.mon-ent-occitanie.fr/*",
+    "https://*.ent.fr/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/gif/*.gif",
+        "assets/images/*.png",
+        "assets/images/*.ico",
+        "assets/icons/*.png",
+        "assets/musics/*.mp3"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "privacy policy online" : "https://oraxelerator.github.io/website/privacy_policity.html",
+  "homepage_url": "https://oraxelerator.github.io/website/myEnt.html"
+}
