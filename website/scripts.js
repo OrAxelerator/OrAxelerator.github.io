@@ -20,7 +20,7 @@
   if (isMobile()) {
     console.log("📱 Utilisateur sur mobile !");
     document.getElementById("hidden").classList.add("hidden")
-    document.getElementById("mesage").innerHTML = "<p>site pas dispo sur mobile</p>"
+    document.getElementById("block").innerHTML = "<p>site pas dispo sur mobile</p>"
 
 
   } else {
@@ -75,6 +75,9 @@ clickButton = () => {
   console.log("clicked")
 };
 
+
+
+function getNavigateur () {
 const userAgent = navigator.userAgent;
 
 // Simple détection (attention : pas 100% fiable mais suffisant pour plein d'usages)
@@ -92,18 +95,122 @@ if (userAgent.includes("Chrome") && !userAgent.includes("Edg") && !userAgent.inc
   browser = "Opera";
 }
 
-console.log("Navigateur détecté :", browser);
 
-if (browser === "Mozilla Firefox" || browser === "Safari") {
-  download = "pas compatible"
-  console.log("pas compatible")
-}else {
-  console.log("compatible")
-  download = "compatible"
+
+return browser
 };
+
+console.log(getNavigateur());
+
+function checkNavigateur (x) { // x => navigateur
+
+if (x === "Mozilla Firefox" || x === "Safari") {
+  download = "pas compatible";
+  console.log("pas compatible");
+
+  
+
+  return false;
+
+}else {
+  download = "compatible";
+  
+  
+  
+
+  return true;
+};
+
+};
+
+
+
+console.log(checkNavigateur(getNavigateur()));
+
+
+
+function afficherTexte() {
+  let texte = document.querySelectorAll(".texte-blanc");
+  texte.forEach(el => el.classList.add("visible"));
+
+    let texte2 = document.querySelectorAll(".texte-blanc2");
+  texte2.forEach(el => el.classList.add("visible2"));
+}
+
+ const button = document.getElementById('button')
+
+  button.addEventListener('click', () => {
+      console.log("Le bouton a été cliqué !");
+      removeInstruction();
+      
+
+    if (checkNavigateur(getNavigateur()) === false) {
+      console.log("désolé c dommage, tu peux tjrs changé de navigateurs")
+    } else {
+     
+    }
+
+    console.log("Attente...");
+
+    
+
+    
+setTimeout(() => {
+  console.log("3 secondes écoulées !");
+
+  document.getElementById("instruction").style.display = "none";  
+  afficherTexte()
+
+
+
+
+}, 3000);
+
+        
+});
+
+
+
+function removeInstruction() {
+  const instructions = document.querySelectorAll('.instruction');
+  instructions.forEach(el => el.classList.add('disparaitre'));
+};
+
+
+function removeSvgButton() {
+
+  if (checkNavigateur(getNavigateur()) === false) {
+  console.log(document.querySelectorAll(".svg"));
+  //class()svg
+}else {
+   console.log(document.querySelectorAll(".svg"));
+};
+};
+
+removeSvgButton();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.getElementById('comp').innerText = download;
   
+
+
   // ammount to add on each button press
   const confettiCount = 20
   const sequinCount = 10
@@ -114,17 +221,19 @@ document.getElementById('comp').innerText = download;
   const dragConfetti = 0.075
   const dragSequins = 0.02
   const terminalVelocity = 3
-  console.log("test   ")
+  
   
   // init other global elements
-  const button = document.getElementById('button')
-
-  button.addEventListener('click', () => {
-      console.log("Le bouton a été cliqué !");
-    });
+ 
 
 
-  var disabled = false
+
+
+
+
+
+
+  var disabled = false //pas changer
   const canvas = document.getElementById('canvas')
   const ctx = canvas.getContext('2d')
   clickButton = () => {
@@ -359,7 +468,13 @@ document.getElementById('comp').innerText = download;
   
   // kick off the render loop
   window.initBurst()
+
+  if (checkNavigateur(getNavigateur()) === false) {
+  console.log("no")
+}else {
   render() /*sans rendre pas confétit*/
+  
+}
   
 
 
@@ -374,15 +489,15 @@ document.getElementById('comp').innerText = download;
 
 
 
-  window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      const maxScroll = 750; // À 750px -> opacité max
+ // window.addEventListener('scroll', () => {
+   //   const scrollY = window.scrollY;
+     // const maxScroll = 750; // À 750px -> opacité max
     
-      const progress = Math.min(scrollY / maxScroll, 1); // clamp entre 0 et 1
+      //const progress = Math.min(scrollY / maxScroll, 1); // clamp entre 0 et 1
     
       const target = document.getElementById('resaux');
     
       // Change la couleur de fond progressivement
-      target.style.backgroundColor = `rgba(123, 92, 255, ${progress})`; 
-    });
+      target.style.backgroundColor = `rgba(0,	0,	0)`; 
+   // });
     
