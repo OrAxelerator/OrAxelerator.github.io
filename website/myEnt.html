@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myEnt</title>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
     <link rel="stylesheet" href="myEnt.css">
 </head>
 
@@ -26,17 +27,27 @@
         <div class="resaux" id="resaux">
             <div class="resaux-img">
 
-                <a href="https://github.com/OrAxelerator/OrAxelerator.github.io" target="_blank"><img
-                        src="assets/images/git.png" class="img-git"></a>
+                <a href="https://github.com/OrAxelerator/OrAxelerator.github.io" target="_blank">
+                    <img src="assets/images/app_git.png" class="img-git"> 
+                </a>
+
                 <a href="https://www.instagram.com/myent_official?igsh=b3F1azl5MTB3Nm93&utm_source=qr " target="_blank">
-                    <img src="assets/images/insta-app.png" class="img-insta"> </a>
-                <a href="https://www.youtube.com/@OrAxelerator" target="_blank"> <img
-                        src="assets/images/youtube-play.png" class="img-yt"></a>
-                <a href="https://chromewebstore.google.com/detail/modification-de-lent/olikaoeidblenflggdnfbjlmmpihfnhc"
-                    target="_blank"> <img src="assets/images/gg.png" class="img-gg"> </a>
-                <a href="https://discord.com/invite/ny6RPdtW33" target="_blank"> <img
-                        src="assets/images/discord-computer-icons-logo-social-media-png-favpng-sCqKwuEaekk7xnBMsAUfBAaku.png"
-                        class="img-gg"> </a>
+                    <img src="assets/images/app_insta.png" class="img-insta"> 
+                </a>
+
+                <a href="https://www.youtube.com/@OrAxelerator" target="_blank"> 
+                    <img src="assets/images/app_youtube.png" class="img-yt">
+                </a>
+
+                <a href="https://chromewebstore.google.com/detail/modification-de-lent/olikaoeidblenflggdnfbjlmmpihfnhc" target="_blank"> 
+                    <img src="assets/images/app_google.png" class="img-gg"> 
+                </a>
+
+                <a href="https://discord.com/invite/ny6RPdtW33" target="_blank"> 
+                    <img src="assets/images/app_discord.png" class="img-gg"> 
+                </a>
+
+
             </div>
         </div>
 
@@ -128,21 +139,22 @@
                 <div class="container-fonc">
 
                     <div class="fonc">
-                        <img src="assets/images/fond6.gif" class="fonc-b-1">
+                        <video src="assets/images/fond.mp4" class="fonc-b-1-2" muted loop></video>
                         <div class="texte-hover">Myent – Change de thème</div>
                     </div>
 
                     <div class="fonc">
-                        <img src="assets/images/onglet6.gif" class="fonc-b-1-2">
+                        <video src="assets/images/onglet.mp4" class="fonc-b-1-2" muted loop></video>
                         <!-- le -2 sert a allonger et recentré la vidéo onglet6 car elle etait pas assez "étirez" -->
                         <div class="texte-hover">Myent – Organise ton menu</div>
                     </div>
 
                     <div class="fonc">
-                        <img src="assets/images/name.gif" class="fonc-b-1-2">
+                        <video src="assets/images/name.mp4" class="fonc-b-1-3" muted loop></video>
                         <div class="texte-hover">Myent – Change de pseudo</div>
                     </div>
                 </div>
+
 
 
 
@@ -158,7 +170,7 @@
                 <div class="container-fonc">
 
                     <div class="fonc">
-                        <img src="assets/images/cat_mystere.gif" class="fonc-b-1">
+                        <video src="assets/images/cat_mystere.mp4" class="fonc-b-1" muted loop></video>
                         <div class="texte-hover">Myent – ???</div>
                     </div>
 
@@ -167,11 +179,38 @@
                     </div>
 
                     <div class="fonc">
-                        <img src="assets/images/pink.gif" class="fonc-b-1">
+                        <video src="assets/images/pink.mp4" class="fonc-b-1-2" muted loop></video>
                         <div class="texte-hover">Myent – 🟣 Nouveau thème 🟣 </div>
                     </div>
                 </div>
 
+                <script>
+                    document.querySelectorAll("video").forEach(video => {
+                        video.controls = false;
+                        video.playbackRate = 1;
+
+                        let slowingDown;
+
+                        video.addEventListener("mouseenter", () => {
+                            clearInterval(slowingDown);
+                            video.play();
+                            video.playbackRate = 1;
+                        });
+
+                        video.addEventListener("mouseleave", () => {
+                            slowingDown = setInterval(() => {
+                                if (video.playbackRate > 0.2) {
+                                    video.playbackRate -= 0.1;
+                                } else {
+                                    clearInterval(slowingDown);
+                                    video.pause();
+                                    video.playbackRate = 1; // reset for next hover
+                                }
+                            }, 100); // ralentit plus doucement
+                        });
+                    });
+
+                </script>
 
 
             </div>
@@ -219,7 +258,7 @@
 
                 </div>
 
-                
+
 
 
             </div>
@@ -231,7 +270,7 @@
 
                 <div class="centerInstructuion">
 
-                    
+
 
 
 
@@ -272,7 +311,7 @@
                         .texte-blanc2 {
                             color: white;
                             font-size: 100%;
-                            position:absolute; 
+                            position: absolute;
                             bottom: 10px;
                             opacity: 0;
                             transform: translateY(20px);
@@ -293,7 +332,7 @@
                             transform: translateY(0);
                             top: 220px;
                             left: 65px;
-                            
+
                             font-size: 30px
                         }
 
@@ -326,7 +365,7 @@
         <div class="up-section"></div>
 
 
-        <h1 style="text-align: center; text-decoration: underline;">A propos de nous : </h1>
+        <h1 style="text-align: center; text-decoration: underline;">À propos de nous : </h1>
 
 
 
@@ -338,15 +377,21 @@
                 <div class="container-fonc2">
 
                     <div class="fonc2">
+                         <a href="https://oraxelerator.github.io/website/privacy_policity.html" target="_blank" style="text-decoration: none; color: inherit;">
                         <div class="texte-hover">Politique de confidentialité</div>
+                        </a>
                     </div>
 
                     <div class="fonc2">
+                         <a href="https://oraxelerator.github.io/website/extensions_tracker.html" target="_blank" style="text-decoration: none; color: inherit;">
                         <div class="texte-hover">Suivi des mises à jour de l'ent</div>
+                        </a>
                     </div>
 
                     <div class="fonc2">
+                         <a href="https://oraxelerator.github.io/website/blabla.html" target="_blank" style="text-decoration: none; color: inherit;">
                         <div class="texte-hover">code</div>
+                        </a>
                     </div>
                 </div>
 
@@ -360,7 +405,13 @@
         </div>
 
         <p class="txt-article"> MyEnt est toujours en développement et n'est pas encore compatible avec tous les ent de
-            France</p>
+            France, venez m'aidez sur le discord svp</p>
+        <br>
+        <p>Pas grand chose d'autre a dire pour l'instant ...</p>
+        <br>
+        <p>
+            c'est que le début de l'aventure
+        </p>
 
 
 
