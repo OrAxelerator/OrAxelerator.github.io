@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Scroll tactile menu</title>
+<title>Menu superposé & contenu plein écran</title>
 <style>
   * {
     margin: 0; padding: 0; box-sizing: border-box;
@@ -14,20 +14,52 @@
     font-family: Arial, sans-serif;
   }
   body {
-    display: flex;
+    position: relative;
   }
+
+  /* Bouton hamburger */
+  #menu-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 110;
+  }
+  #menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    border-radius: 2px;
+  }
+
+  /* Menu fixe superposé */
   nav {
     position: fixed;
     top: 0; left: 0;
-    width: 120px;
+    width: 140px;
     height: 100vh;
-    background: #222;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    z-index: 10;
-    user-select: none; /* pour éviter sélection lors swipe */
-    touch-action: none; /* empêche le scroll natif sur mobile */
+    z-index: 100;
+    user-select: none;
+    touch-action: none;
+    transform: translateX(-140px);
+    transition: transform 0.3s ease;
+  }
+  nav.active {
+    transform: translateX(0);
   }
   nav a {
     color: #ccc;
@@ -39,58 +71,124 @@
   nav a.active {
     color: #0f0;
   }
+
   main {
-    flex-grow: 1;
-    width: calc(100vw - 120px);
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
   }
   section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    overflow-y: auto;
     position: absolute;
     top: 0; left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+    padding: 1rem;
+    background: #eee;
     color: white;
-    transition: transform 0.5s ease;
+
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
-  #section1 {
-    background: #e74c3c;
+  section.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
-  #section2 {
-    background: #3498db;
-    transform: translateY(100%);
-  }
-  #section3 {
-    background: #2ecc71;
-    transform: translateY(200%);
-  }
+
+  #section1 { background: #e74c3c; }
+  #section2 { background: #3498db; }
+  #section3 { background: #2ecc71; }
+  #section4 { background: #9b59b6; }
+
+  /* Contenu long dans certaines sections */
+  #section1 .content { height: auto; }
+  #section2 .content { height: 150vh; }
+  #section3 .content { height: auto; }
+  #section4 .content { height: 120vh; }
 </style>
 </head>
 <body>
 
-<nav id="nav">
+<div id="menu-button" aria-label="Ouvrir le menu" role="button" tabindex="0">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<nav id="nav" aria-hidden="true">
   <a href="#section1" class="active" data-index="0">Accueil</a>
   <a href="#section2" data-index="1">Services</a>
   <a href="#section3" data-index="2">Contact</a>
+  <a href="#section4" data-index="3">À propos</a>
 </nav>
 
 <main id="main">
-  <section id="section1">Accueil</section>
-  <section id="section2">Services</section>
-  <section id="section3">Contact</section>
+  <section id="section1" class="active">
+    <div class="content">
+      <h2>Accueil</h2>
+      <p>Contenu court ici. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Encore un peu de texte.</p>
+    </div>
+  </section>
+  <section id="section2">
+    <div class="content">
+      <h2>Services</h2>
+      <p>Contenu long ici... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius turpis a lorem vehicula, at condimentum nisl tincidunt. Curabitur placerat magna in magna feugiat, sed scelerisque urna cursus.</p>
+      <p>Beaucoup de contenu...</p>
+      <p>Encore plus de contenu...</p>
+      <p>Et encore un peu plus...</p>
+      <p>On allonge pour tester le scroll.</p>
+    </div>
+  </section>
+  <section id="section3">
+    <div class="content">
+      <h2>Contact</h2>
+      <p>Contenu court également. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Un peu plus de texte pour remplir.</p>
+    </div>
+  </section>
+  <section id="section4">
+    <div class="content">
+      <h2>À propos</h2>
+      <p>Contenu un peu plus long. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales lacus ut elit convallis tincidunt. Nullam cursus erat a lorem faucibus, eu fermentum purus tempus.</p>
+      <p>Encore un peu de contenu.</p>
+      <p>Et encore un peu.</p>
+    </div>
+  </section>
 </main>
 
 <script>
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav a');
   const nav = document.getElementById('nav');
+  const menuButton = document.getElementById('menu-button');
   let currentIndex = 0;
   let isAnimating = false;
+
+  function toggleMenu(show) {
+    if(show === undefined) show = !nav.classList.contains('active');
+    if(show) {
+      nav.classList.add('active');
+      nav.setAttribute('aria-hidden', 'false');
+    } else {
+      nav.classList.remove('active');
+      nav.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  menuButton.addEventListener('click', () => {
+    toggleMenu();
+  });
+  menuButton.addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
 
   function updateMenu() {
     navLinks.forEach(link => link.classList.remove('active'));
@@ -101,40 +199,62 @@
     if(index < 0 || index >= sections.length) return;
     if(isAnimating) return;
     isAnimating = true;
-    currentIndex = index;
 
     sections.forEach((section, i) => {
-      section.style.transform = `translateY(${100 * (i - currentIndex)}%)`;
+      if(i === index) {
+        section.classList.add('active');
+        section.classList.remove('hidden');
+      } else {
+        section.classList.remove('active');
+        section.classList.add('hidden');
+        section.scrollTop = 0;
+      }
     });
+
+    currentIndex = index;
     updateMenu();
 
     setTimeout(() => {
       isAnimating = false;
-    }, 600);
+    }, 400);
   }
 
-  // Gestion du swipe tactile sur le menu
+  function canScrollUp(section) {
+    return section.scrollTop > 0;
+  }
+  function canScrollDown(section) {
+    return section.scrollTop + section.clientHeight < section.scrollHeight - 5;
+  }
+
   let startY = 0;
   let endY = 0;
+  let isTouching = false;
 
-  nav.addEventListener('touchstart', e => {
-    if(isAnimating) return;
-    startY = e.touches[0].clientY;
-  });
+  sections.forEach(section => {
+    section.addEventListener('touchstart', e => {
+      if(isAnimating) return;
+      isTouching = true;
+      startY = e.touches[0].clientY;
+      endY = startY;
+    });
 
-  nav.addEventListener('touchmove', e => {
-    if(isAnimating) return;
-    endY = e.touches[0].clientY;
-  });
+    section.addEventListener('touchmove', e => {
+      if(!isTouching || isAnimating) return;
+      endY = e.touches[0].clientY;
+    });
 
-  nav.addEventListener('touchend', e => {
-    if(isAnimating) return;
-    let diff = startY - endY;
-    if(diff > 50) {
-      showSection(currentIndex + 1);
-    } else if(diff < -50) {
-      showSection(currentIndex - 1);
-    }
+    section.addEventListener('touchend', e => {
+      if(!isTouching || isAnimating) return;
+      isTouching = false;
+      let diff = startY - endY;
+      const currentSection = sections[currentIndex];
+
+      if(diff > 50 && !canScrollDown(currentSection)) {
+        showSection(currentIndex + 1);
+      } else if(diff < -50 && !canScrollUp(currentSection)) {
+        showSection(currentIndex - 1);
+      }
+    });
   });
 
   navLinks.forEach(link => {
@@ -142,6 +262,7 @@
       e.preventDefault();
       const index = parseInt(link.dataset.index);
       showSection(index);
+      toggleMenu(false);
     });
   });
 
