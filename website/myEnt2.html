@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="myEnt2.css">
-    <title>Menu superposé & contenu plein écran</title>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+    <title>MyEnt versions mobile</title>
     <style>
 
     </style>
@@ -81,6 +82,7 @@
 
                 </div>
 
+                <div class="up-section"> </div>
 
 
 
@@ -100,186 +102,188 @@
 
         <section id="section2">
             <div class="content">
-                <div class="up-section">
-                    <p class="titre-section"> KEZAKO </p>
+                <div class="up-section"></div>
 
-                </div>
-
-
-
-                <p class="txt-article"> 1 - Qu'est-ce que myEnt ??</p>
-                <p class="txt-article"> MyEnt est juste une extension web entièrement gratuite</p>
-                <p class="txt-article"> Elle te permet de
-                    modifier l'apparence de l’ENT. Que tu veuilles un thème plus sombre, des couleurs plus sympas ou une
-                    mise en
-                    page plus claire, Myent te donne les outils pour le faire. </p>
-                <p class="txt-article"> </p>
-                <p class="txt-article"> </p>
+                    <div class="txt-logo-container">
+                        <p class="titre-section"> KEZAKO </p>
 
 
 
 
+                        <p class="txt-article"> 1 - Qu'est-ce que myEnt ??</p>
+                        <p class="txt-article"> MyEnt est juste une extension web entièrement gratuite</p>
+                        <p class="txt-article"> Elle te permet de
+                            modifier l'apparence de l’ENT. Que tu veuilles un thème plus sombre, des couleurs plus
+                            sympas ou une
+                            mise en
+                            page plus claire, Myent te donne les outils pour le faire. </p>
+                        <p class="txt-article"> </p>
+                        <p class="txt-article"> </p>
 
 
 
 
 
-                <div class="tabs">
 
-                    <div id="tab1" class="tab-content active">
-                        <div class="carousel-container">
-                            <div class="carousel-track">
-                                <div class="fonc">
-                                    <video src="assets/images/fond.mp4" class="fonc-b-1-2" muted loop></video>
-                                    <div class="texte-hover">Myent – Change de thème</div>
-                                </div>
-                                <div class="fonc">
-                                    <video src="assets/images/onglet.mp4" class="fonc-b-1-2" muted loop></video>
-                                    <div class="texte-hover">Myent – Organise ton menu</div>
-                                </div>
-                                <div class="fonc">
-                                    <video src="assets/images/name.mp4" class="fonc-b-1-3" muted loop></video>
-                                    <div class="texte-hover">Myent – Change de pseudo</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div id="tab2" class="tab-content img-container2">
-                        <div class="carousel-container">
-                            <div class="carousel-track">
-                                <div class="fonc">
-                                    <video src="assets/images/cat_mystere.mp4" class="fonc-b-1" muted loop></video>
-                                    <div class="texte-hover">Myent – ???</div>
-                                </div>
-                                <div class="fonc">
-                                    <div class="texte-hover">Myent – lofi girl</div>
-                                </div>
-                                <div class="fonc">
-                                    <video src="assets/images/pink.mp4" class="fonc-b-1-2" muted loop></video>
-                                    <div class="texte-hover">Myent – 🟣 Nouveau thème 🟣</div>
+
+
+                        <div class="tabs">
+
+                            <div id="tab1" class="tab-content active">
+                                <div class="carousel-container">
+                                    <div class="carousel-track">
+                                        <div class="fonc">
+                                            <video src="assets/images/fond.mp4" class="fonc-b-1-2" muted loop  autoplay   playsinline></video>
+                                            <div class="texte-hover">Myent – Change de thème</div>
+                                        </div>
+                                        <div class="fonc">
+                                            <video src="assets/images/onglet.mp4" class="fonc-b-1-2" muted loop  autoplay   playsinline ></video>
+                                            <div class="texte-hover">Myent – Organise ton menu</div>
+                                        </div>
+                                        <div class="fonc">
+                                            <video src="assets/images/name.mp4" class="fonc-b-1-3" muted loop  autoplay   playsinline ></video>
+                                            <div class="texte-hover">Myent – Change de pseudo</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tab-buttons">
-                        <button class="tab-link active tabBtn1" onclick="openTab(event, 'tab1')">fonctionalité
-                            principale</button>
-                        <button class="tab-link tabBtn2" onclick="openTab(event, 'tab2')">dernière
-                            fonctionalité</button>
-                    </div>
 
-                    <script>
-                        document.querySelectorAll("video").forEach(video => {
-                            video.controls = false;
-                            video.playbackRate = 1;
+                            <div id="tab2" class="tab-content img-container2">
+                                <div class="carousel-container">
+                                    <div class="carousel-track">
+                                        <div class="fonc">
+                                            <video src="assets/images/cat_mystere.mp4" class="fonc-b-1" muted   autoplay   playsinline    loop></video>
+                                            <div class="texte-hover">Myent – ???</div>
+                                        </div>
+                                        <div class="fonc">
+                                            <div class="texte-hover">Myent – lofi girl</div>
+                                        </div>
+                                        <div class="fonc">
+                                            <video src="assets/images/pink.mp4" class="fonc-b-1-2" muted loop autoplay   playsinline > </video>
+                                            <div class="texte-hover">Myent – 🟣 Nouveau thème 🟣</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-buttons">
+                                <button class="tab-link active tabBtn1" onclick="openTab(event, 'tab1')">fonctionalité
+                                    principale</button>
+                                <button class="tab-link tabBtn2" onclick="openTab(event, 'tab2')">dernière
+                                    fonctionalité</button>
+                            </div>
 
-                            let slowingDown;
+                            <script>
+                                document.querySelectorAll("video").forEach(video => {
+                                    video.controls = false;
+                                    video.playbackRate = 1;
 
-                            video.addEventListener("mouseenter", () => {
-                                clearInterval(slowingDown);
-                                video.play();
-                                video.playbackRate = 1;
-                            });
+                                    let slowingDown;
 
-                            video.addEventListener("mouseleave", () => {
-                                slowingDown = setInterval(() => {
-                                    if (video.playbackRate > 0.2) {
-                                        video.playbackRate -= 0.1;
-                                    } else {
+                                    video.addEventListener("mouseenter", () => {
                                         clearInterval(slowingDown);
-                                        video.pause();
-                                        video.playbackRate = 1; // reset for next hover
+                                        video.play();
+                                        video.playbackRate = 1;
+                                    });
+
+                                    video.addEventListener("mouseleave", () => {
+                                        slowingDown = setInterval(() => {
+                                            if (video.playbackRate > 0.2) {
+                                                video.playbackRate -= 0.1;
+                                            } else {
+                                                clearInterval(slowingDown);
+                                                video.pause();
+                                                video.playbackRate = 1; // reset for next hover
+                                            }
+                                        }, 100); // ralentit plus doucement
+                                    });
+                                });
+
+
+
+
+                                function returnIndex(index) {
+                                    return index
+                                }
+
+                                function addIndex(index, number) {
+                                    return index + number
+                                }
+
+                                function substractIndex(index, number) {
+                                    return index - number
+                                }
+
+
+                                function openTab(evt, tabName) {
+                                    const tabContents = document.querySelectorAll(".tab-content");
+                                    const tabLinks = document.querySelectorAll(".tab-link");
+
+                                    // Cacher tout le contenu
+                                    tabContents.forEach(tab => tab.classList.remove("active"));
+
+                                    // Enlever la classe active de tous les boutons
+                                    tabLinks.forEach(btn => btn.classList.remove("active"));
+
+                                    // Afficher l'onglet sélectionné
+                                    document.getElementById(tabName).classList.add("active");
+
+                                    // Ajouter la classe active au bouton cliqué
+                                    evt.currentTarget.classList.add("active");
+
+                                    // Réinitialiser les carrousels à l'index 0
+                                    document.querySelectorAll('.carousel-track').forEach(track => {
+                                        track.style.transform = `translateX(0%)`;
+                                    });
+
+                                    // Réinitialiser les points
+                                    blackDot(0);
+                                }
+
+                                // Gestion du carrousel swipe
+                                document.querySelectorAll('.carousel-container').forEach(container => {
+                                    const track = container.querySelector('.carousel-track');
+                                    const slides = track.children;
+                                    let index = 0;
+
+                                    let startX = 0;
+                                    let endX = 0;
+
+                                    container.addEventListener('touchstart', e => {
+                                        startX = e.touches[0].clientX;
+                                    });
+
+                                    container.addEventListener('touchmove', e => {
+                                        endX = e.touches[0].clientX;
+                                    });
+
+                                    container.addEventListener('touchend', () => {
+                                        const diff = startX - endX;
+
+                                        if (diff > 50 && index < slides.length - 1) {
+                                            index++;
+                                        } else if (diff < -50 && index > 0) {
+                                            index--;
+                                        }
+
+                                        track.style.transform = `translateX(-${index * 100}%)`;
+                                        blackDot(index);
+                                    });
+                                });
+
+                                // Gestion des points (dots)
+                                function blackDot(cible) {
+                                    const dots = document.querySelectorAll(".dot");
+                                    dots.forEach(dot => dot.classList.remove("dot-active"));
+                                    if (dots[cible]) {
+                                        dots[cible].classList.add("dot-active");
                                     }
-                                }, 100); // ralentit plus doucement
-                            });
-                        });
+                                }
 
 
 
 
-                        function returnIndex(index) {
-                            return index
-                        }
-
-                        function addIndex(index, number) {
-                            return index + number
-                        }
-
-                        function substractIndex(index, number) {
-                            return index - number
-                        }
-
-
-                      function openTab(evt, tabName) {
-    const tabContents = document.querySelectorAll(".tab-content");
-    const tabLinks = document.querySelectorAll(".tab-link");
-
-    // Cacher tout le contenu
-    tabContents.forEach(tab => tab.classList.remove("active"));
-
-    // Enlever la classe active de tous les boutons
-    tabLinks.forEach(btn => btn.classList.remove("active"));
-
-    // Afficher l'onglet sélectionné
-    document.getElementById(tabName).classList.add("active");
-
-    // Ajouter la classe active au bouton cliqué
-    evt.currentTarget.classList.add("active");
-
-    // Réinitialiser les carrousels à l'index 0
-    document.querySelectorAll('.carousel-track').forEach(track => {
-        track.style.transform = `translateX(0%)`;
-    });
-
-    // Réinitialiser les points
-    blackDot(0);
-}
-
-// Gestion du carrousel swipe
-document.querySelectorAll('.carousel-container').forEach(container => {
-    const track = container.querySelector('.carousel-track');
-    const slides = track.children;
-    let index = 0;
-
-    let startX = 0;
-    let endX = 0;
-
-    container.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-    });
-
-    container.addEventListener('touchmove', e => {
-        endX = e.touches[0].clientX;
-    });
-
-    container.addEventListener('touchend', () => {
-        const diff = startX - endX;
-
-        if (diff > 50 && index < slides.length - 1) {
-            index++;
-        } else if (diff < -50 && index > 0) {
-            index--;
-        }
-
-        track.style.transform = `translateX(-${index * 100}%)`;
-        blackDot(index);
-    });
-});
-
-// Gestion des points (dots)
-function blackDot(cible) {
-    const dots = document.querySelectorAll(".dot");
-    dots.forEach(dot => dot.classList.remove("dot-active"));
-    if (dots[cible]) {
-        dots[cible].classList.add("dot-active");
-    }
-}
-
-
-
-
-                    </script>
+                            </script>
 
 
 
@@ -287,43 +291,53 @@ function blackDot(cible) {
 
 
 
-                </div>
+                        </div>
 
 
-                <div class="pagination-dots-container">
+                        <div class="pagination-dots-container">
 
 
-                    <div class="pagination-dots">
-                        <div class="dot zero dot-active" ></div>
-                        <div class="dot un"></div>
-                        <div class="dot deux"></div>
+                            <div class="pagination-dots">
+                                <div class="dot zero dot-active"></div>
+                                <div class="dot un"></div>
+                                <div class="dot deux"></div>
+                            </div>
+
+
+                        </div>
+
+
+
                     </div>
 
-
+                    
+                    
+                    <div class="up-section"> </div>
                 </div>
-
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             </div>
-
-            </div>
-
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
             </div>
+            </div>
+            
+        
         </section>
 
 
@@ -331,10 +345,17 @@ function blackDot(cible) {
 
         <section id="section3">
             <div class="content">
-                <h2>NOUS</h2>
-                <p>Contenu court également. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Un peu plus de texte pour remplir.</p>
-            </div>
+                <div class="up-section"> </div>
+                <div class="txt-logo-container">
+
+                    <h2>NOUS</h2>
+                    <p>Contenu court également. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Un peu plus de texte pour remplir.</p>
+                </div>
+
+                <div class="up-section"> </div>
+                </div>
+
         </section>
 
 
@@ -349,79 +370,86 @@ function blackDot(cible) {
 
 
 
+
+
                 <div class="up-section">
-                    <p class="titre-section"> </p>
+                   
                 </div>
 
-                <p>🚀 Rejoignez-nous sur :</p>
-
-                <p class="txt-article">Vous aussi venez participez au dévellopement de MyEnt.</p>
-                <p class="txt-article"> Pas besion de beaucoup de connaissance en html, css ... allez voir le formulaire
-                    sur disord</p>
+                <div class="txt-logo-container">
 
 
-
-
-                <div class="help-container">
-
-
-
-                    <div class="help-discord">
-
-
-
-                        <div class="help-square square1">
-
-
-
-                            <a href="https://discord.com/invite/ny6RPdtW33" target="_blank">
+                    <p>🚀 Rejoignez-nous sur :</p>
+    
+                    <p class="txt-article">Vous aussi venez participez au dévellopement de MyEnt.</p>
+                    <p class="txt-article"> Pas besion de beaucoup de connaissance en html, css ... allez voir le formulaire
+                        sur disord</p>
+    
+    
+    
+    
+                    <div class="help-container">
+    
+    
+    
+                        <div class="help-discord">
+    
+    
+    
+                            <div class="help-square square1">
+    
+    
+    
+                                <a href="https://discord.com/invite/ny6RPdtW33" target="_blank">
                                     <img src="assets/images/app_discord.png" class="discord-img">
-                            </a>
-
-
-
-
-
+                                </a>
+    
+    
+    
+    
+    
+                            </div>
+    
+    
+    
+    
+    
+    
                         </div>
-
-
-
-
-
-
-                    </div>
-
-                    <div class="help-github">
-
-                        <div class="help-square square1">
-
-                            <a href="https://github.com/OrAxelerator/OrAxelerator.github.io" target="_blank">
-                                   <img src="assets/images/app_git.png" class="github-img">
-                            </a>
+    
+                        <div class="help-github">
+    
+                            <div class="help-square square1">
+    
+                                <a href="https://github.com/OrAxelerator/OrAxelerator.github.io" target="_blank">
+                                    <img src="assets/images/app_git.png" class="github-img">
+                                </a>
+                            </div>
+    
                         </div>
-
+    
+    
                     </div>
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                    
+                    
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <div class="up-section"></div>
             </div>
+
         </section>
     </main>
 
